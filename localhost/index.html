@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona</title>
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+
+<header>
+    <img src="images/logo111.png" alt="Logo">
+    <nav>
+        <a href="#">O nas</a>
+        <a href="#">Usługi</a>
+        <a href="#">Cennik</a>
+        <a href="#">Kontakt</a>
+        <a href="#">Opinie</a>
+        <a href="#">Pytania i odpowiedzi</a>
+    </nav>
+    <div class="contact-info">
+        <div class="contact-details">
+            <span>+48609509089</span>
+            <span>Zamów rozmowę</span>
+        </div>
+        <div class="dropdown">
+            <select>
+                <option>PL</option>
+                <option>EN</option>
+            </select>
+        </div>
+    </div>
+</header>
+
+<section class="hero-section">
+    <div>
+        <h2>Nasi kurierzy</h2>
+        <div class="courier-logos">
+            <div class="courier-logo-container">
+                <img src="images/dpd.png" alt="DPD">
+            </div>
+            <div class="courier-logo-container">
+                <img src="images/GLS.png" alt="GLS">
+            </div>
+            <div class="courier-logo-container">
+                <img src="images/DHL.png" alt="DHL">
+            </div>
+            <div class="courier-logo-container">
+                <img src="images/shotify.png" alt="Shopify">
+            </div>
+            <div class="courier-logo-container">
+                <img src="images/commers.png" alt="WooCommerce">
+            </div>
+            <div class="courier-logo-container">
+                <img src="images/presta.png" alt="PrestaShop">
+            </div>
+            <div class="courier-logo-container">
+                <img src="images/ppl.png" alt="PPL">
+            </div>
+            <div class="courier-logo-container">
+                <img src="images/posta.png" alt="Slovenská pošta">
+            </div>
+            <div class="courier-logo-container">
+                <img src="images/magento.png" alt="Magento">
+            </div>
+        </div>
+    </div>
+    <img src="images/box.png" alt="Package">
+</section>
+
+
+<section class="form-section">
+    <div class="form-container">
+        <h2>Szukasz najlepszej oferty?</h2>
+        <p>Zostaw aplikację, a nasz menedżer skontaktuje się z Tobą w celu konsultacji</p>
+        <form id="yourFormId">
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" id="firstName" name="firstName" maxlength="50" placeholder="Twoje imię" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="lastName" name="lastName" maxlength="50" placeholder="Twoje nazwisko" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="middleName" name="middleName" maxlength="50" placeholder="Twoje drugie imię">
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" id="birthDate" name="birthDate" placeholder="Twoja data urodzenia" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="E-mail">
+            </div>
+            <div class="form-group phone-input-container">
+                <input 
+                    type="text" 
+                    class="phone-input-display" 
+                    placeholder="Telefon" 
+                    readonly 
+                    onclick="openPhoneModal()" 
+                >
+                <div id="phoneModal" class="modal">
+                    <div class="modal-content">
+                        <h3>Wpisz swój numer telefonu</h3>
+                        <div id="phoneFieldsContainer">
+                            <div class="phone-entry">
+                                <select class="country-code">
+                                    <option value="+375">🇧🇾 +375</option>
+                                    <option value="+7">🇷🇺 +7</option>
+                                </select>
+                            
+                                <input 
+                                    type="tel" 
+                                    class="phone-input" 
+                                    placeholder="(__) ___-__-__" 
+                                    required
+                                >
+                            </div>
+                        </div>
+                        <button 
+                            type="button" 
+                            class="add-phone" 
+                            onclick="addPhoneField()"
+                        >
+                            Добавить номер
+                        </button>
+                        <button 
+                            type="button" 
+                            onclick="savePhoneNumbers()"
+                            id="savePhoneButton"
+                        >
+                            Сохранить
+                        </button>
+                        <div 
+                            class="error-message" 
+                            id="phoneError" 
+                            style="display: none;"
+                        >
+                            Можно добавить не более 5 номеров.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="form-group marital-status-container">
+                <div class="marital-status-header" onclick="toggleMaritalStatusDropdown()"  >
+                    <span class="placeholder">Stan cywilny</span>
+                    <span class="dropdown-icon"  Stan cywilny>
+                        <img src="images/arrow.png" alt="Dropdown Icon" />
+                      </span>
+                </div>
+                <div id="maritalStatusDropdown" class="marital-status-options">
+                    <label>
+                        <input type="radio" name="marital_status" value="single" checked>
+                        Samotny/niezamężny
+                    </label>
+                    <label>
+                        <input type="radio" name="marital_status" value="married">
+                        Żonaty
+                    </label>
+                    <label>
+                        <input type="radio" name="marital_status" value="divorced">
+                        Rozwiedziony
+                    </label>
+                    <label>
+                        <input type="radio" name="marital_status" value="widowed">
+                        Wdowiec/wdowa
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <textarea id="about" name="about" maxlength="1000" rows="3" placeholder="O mnie"></textarea>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="agreement" name="agreement" required>
+                <label for="agreement">Przeczytałem zasady</label>
+                <button type="submit" id="submitButton">Wyślij</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="images/logo111.png" alt="Logo">
+            <p>+48609509089</p>
+            <a href="#">Zamów rozmowę</a>
+            <p>info@enemer.pl</p>
+            <p>Błonie, Pass 201, budynek 15, 05-870</p>
+        </div>
+        <div class="footer-links">
+            <h3>Usługi</h3>
+            <ul>
+                <li>Usługi logistyczne dla e-commerce</li>
+                <li>Outsourcing magazynu</li>
+                <li>Outsourcing logistyczny</li>
+                <li>Obsługa logistyczna sklepów internetowych</li>
+                <li>Logistyka kontraktowa</li>
+                <a href="#" class="view-all">Zobacz wszystkie →</a>
+            </ul>
+        </div>
+        <div class="footer-link">
+            <a href="#">O nas</a>
+            <a href="#">Cennik</a>
+            <a href="#">Pytania i odpowiedzi</a>
+            <a href="#">Kontakt</a>
+            <a href="#">Blog</a>
+        </div>
+        
+        <div class="footer-company">
+            <p>Space Logistics Sp. z o.o. 02-727</p>
+            <p>Warszawa ul. Wołodyjowskiego 67A</p>
+            <p>KRS: 0000832477 NIP: 5213888029</p>
+            <p>REGON: 385377605</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <a href="#">Polityka prywatności</a>
+        <div class="footer-lin">
+            <span>dev.grizzly.by</span>
+            <img src="images/grizzly.png" alt="Logo" class="footer-image">
+            <span>seo.grizzly.by</span>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,674 @@
+@import url('https://fonts.cdnfonts.com/css/averta-cy'); 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+header img {
+    width: 100px;
+    height: auto; 
+    object-fit: contain;
+    margin-left: 320px;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center; 
+    gap: 30px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 5px;
+    margin-right: 100px;
+}
+
+.contact-details span {
+    font-size: 14px;
+    color: #333;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; 
+    margin-right: 160px;
+    margin-left: -90px; 
+    font-family: Arial, sans-serif; 
+    font-size: 14px; 
+    color: #333; 
+    cursor: pointer;
+}
+
+.dropdown select {
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    appearance: none; 
+    padding: 0; 
+    margin-left: 5px; 
+    font-weight: bold;
+    outline: none; 
+}
+
+.dropdown::after {
+    content: "▼"; 
+    font-size: 12px;
+    margin-left: 5px; 
+    color: #333; 
+}
+
+.dropdown select::-ms-expand {
+    display: none; 
+}
+
+.dropdown:hover {
+    color: #000; 
+}
+
+
+.hero-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    padding: 50px;
+    align-items: center;
+    margin-left: 120px;
+    margin-top: 50px;
+}
+
+.hero-section div {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    
+}
+
+.hero-section div h2 {  
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Averta CY', sans-serif; 
+    margin-left: 220px; 
+}
+
+
+.hero-section div img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero-section img {
+    width: 100%;
+    max-width: 500px;
+    justify-self: center;
+}
+
+.courier-logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 8px;                            
+    width: 100%;                          
+    max-width: 500px;                     
+    padding: 8px;                        
+    margin: 0 auto;   
+    margin-left: 210px;                   
+}
+
+.courier-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;                        
+    height: 70px;                         
+    background-color: #fff;                
+    border-radius: 3px;                    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;                      
+    padding-top: 23px;                 
+}
+
+
+
+.courier-logo-container img {
+    max-width: 70%;                       
+    max-height: 70%;                      
+    object-fit: contain;                  
+    display: block;                     
+    margin: 0 auto;                       
+}
+
+
+.form-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 780px; 
+    padding-left: 150px;
+    min-height: 100vh;
+    background-image: url('images/head.png');
+    background-size: contain; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    margin: 50px;
+    height: 530px;
+    width: 620px;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.form-container p {
+    font-size: 14px;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+
+.ui-datepicker {
+    background-color: rgba(0, 0, 0, 0.5) !important; 
+    color: rgba(255, 255, 255, 0.5) !important;   
+    border: none !important;
+    box-shadow: none !important;             
+}
+
+.ui-datepicker table {
+    width: 100%;
+}
+
+.ui-datepicker th {
+    color: rgba(255, 255, 255, 0.5) !important; 
+}
+
+.ui-datepicker td {
+    border: none !important;
+}
+
+.ui-datepicker td a {
+    color: rgba(255, 255, 255, 0.5) !important;
+    text-decoration: none;
+    background: none !important;              
+    border: none !important;                     
+    box-shadow: none !important;                
+}
+
+.ui-datepicker td a:hover,
+.ui-datepicker td a:focus {
+    background: none !important;                
+    color: rgba(255, 255, 255, 0.5) !important;  
+}
+
+.ui-datepicker-header {
+    background: none !important;                 
+    border: none !important;
+    color: rgba(255, 255, 255, 0.5) !important; 
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    filter: invert(0.5);                         
+    background: none !important;               
+    border: none !important;
+}
+
+@font-face {
+    font-family: 'Averta Demo PE';
+    src: url('path-to-your-font/Averta-Demo-PE.woff2') format('woff2'),
+         url('path-to-your-font/Averta-Demo-PE.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px; 
+    font-family: 'Averta Demo PE', sans-serif; 
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: none;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+    height: 40px; 
+}
+
+.form-group textarea {
+    resize: vertical; 
+    overflow: hidden; 
+}
+
+.modal {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%; 
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.modal.active {
+    display: block; 
+    animation: slide-down 0.3s ease-in-out;
+}
+
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content h2 {
+    color: white; 
+    font-size: 18px;
+    margin-bottom: 20px; 
+}
+
+.phone-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    margin-bottom: 10px;
+}
+
+.country-code {
+    flex: 0 0 60px; 
+    background-color: transparent; 
+    color: white; 
+    border: 1px solid #555; 
+    border-radius: 4px; 
+    padding: 8px;
+    text-align: center;
+}
+
+.phone-input {
+    flex: 1; 
+    background-color: transparent; 
+    color: white; 
+    border: 1px solid #555; 
+    border-radius: 4px; 
+    padding: 8px;
+    font-size: 14px;
+}
+.phone-input-container {
+    position: relative;
+}
+
+.add-phone,
+.save-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #555; 
+    color: white; 
+    border: none;
+    border-radius: 4px; 
+    font-size: 14px;
+}
+
+.add-phone:hover,
+.save-button:hover {
+    background-color: #777; 
+}
+
+.marital-status-container {
+    position: relative;
+    width: 100%;
+    font-family: 'Averta CY', sans-serif;
+}
+
+.marital-status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px; 
+    background-color: transparent; 
+    color: #fff; 
+    border: none; 
+    border-bottom: 1px solid #ccc;
+    border-radius: 0; 
+    cursor: pointer;
+    font-size: 14px; 
+}
+
+.dropdown-icon img {
+    width: 16px; 
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.marital-status-header.active .dropdown-icon img {
+    transform: rotate(180deg);
+}
+
+.dropdown-icon {
+    font-size: 14px;
+    transform: rotate(0);
+    transition: transform 0.3s ease;
+}
+
+.marital-status-header.active .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.marital-status-options {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: 100%;
+    background-color: #eaeaea;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    padding: 12px;
+}
+
+.marital-status-header .placeholder {
+    color: #bbb; 
+    font-family: 'Averta Demo PE', sans-serif !important;  
+}
+
+.marital-status-options label {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.marital-status-options label:last-child {
+    margin-bottom: 0;
+}
+
+.marital-status-options label:hover {
+    background-color: #ddd; 
+}
+
+.marital-status-options input[type="radio"] {
+    margin-right: 8px;
+}
+
+.marital-status-container.active .marital-status-options {
+    display: block;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid grey;
+    border-radius: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+    background-color: #fff;
+}
+
+.checkbox-group input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 5px;
+    height: 8px;
+    border: solid #000; 
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-group label {
+    color: #fff; 
+    font-size: 13px;
+}
+
+#submitButton {
+    width: 150px;
+    padding: 5px 10px;
+    background-color: #78599C;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+}
+
+#submitButton:hover {
+    background-color: #5a54d1;
+}
+
+footer {
+    background-color: #fff;
+    padding: 40px 20px;
+    font-family: 'Averta CY', sans-serif; 
+    font-size: 16px; 
+    line-height: 1.6; 
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    width: 120px; 
+    margin-bottom: 20px;
+}
+
+.footer-logo p,
+.footer-logo a {
+    color: #333; 
+    font-size: 14px; 
+    line-height: 1.8; 
+    margin: 10px 0; 
+}
+
+.footer-logo a {
+    text-decoration: none;
+    font-weight: 500; 
+}
+
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 20px; 
+    color: #333; 
+    font-size: 14px;
+}
+
+.footer-links li:last-child {
+    margin-bottom: 0; 
+}
+
+.footer-links a {
+    color: #6c63ff;
+    text-decoration: none;
+    font-weight: 500; 
+}
+
+.footer-company p {
+    margin: 15px 0; 
+    color: #333;
+    font-size: 14px; 
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-bottom a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500; 
+    margin-left: 20px; 
+}
+
+.view-all {
+    color: #8a2be2; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.view-all:hover {
+    text-decoration: underline; 
+}
+
+
+.footer-bottom img {
+    width: 25px;
+    height: auto;
+    vertical-align: middle;
+}
+
+
+.footer-lin {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 5px; 
+    width: 20%; 
+    box-sizing: border-box; 
+}
+.footer-links h3 {
+    font-weight: bold !important; 
+    font-size: 18px; 
+    color: #333; 
+    margin-bottom: 15px; 
+}
+
+.footer-link {
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
+    font-family: 'Averta Demo PE', sans-serif; 
+}
+
+.footer-link a {
+    font-weight: bold; 
+    text-decoration: none; 
+    color: #333; 
+}
+
+.footer-link a:hover {
+    text-decoration: underline;
+}
+
+.footer-links li:not(:last-child),
+.footer-logo p:not(:last-child),
+.footer-company p:not(:last-child) {
+    margin-bottom: 15px; 
+}
+
+
+.footer-links ul > li + li {
+    margin-top: 15px;
+    width: 60px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
